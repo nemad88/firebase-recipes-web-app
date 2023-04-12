@@ -34,9 +34,8 @@ const loginWithGoogle = () => {
 };
 
 const subscribeToAuthChanges = (handleAuthChange) => {
-  //   console.log("c", handleAuthChange);
-
-  auth.onAuthStateChanged((user) => {
+  return auth.onAuthStateChanged((user) => {
+    console.log("auth changed");
     handleAuthChange(user);
   });
 };
